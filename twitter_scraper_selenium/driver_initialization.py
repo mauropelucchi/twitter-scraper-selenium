@@ -68,8 +68,9 @@ class Initializer:
 
                 return webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()),
                                         options=self.set_properties(browser_option), seleniumwire_options=options)
-
-            return webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()), options=self.set_properties(browser_option))
+            wd = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()), options=self.set_properties(browser_option))
+            print(wd)
+            return wd
         elif browser_name.lower() == "firefox":
             browser_option = CustomFireFoxOptions()
             if self.proxy is not None:
