@@ -74,7 +74,7 @@ class Initializer:
 
                 return webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()),
                                         options=self.set_properties(browser_option), seleniumwire_options=options)
-            wd = webdriver.Chrome('', options=self.set_properties(browser_option))
+            wd = webdriver.Chrome('chromedriver', options=self.set_properties(browser_option))
             print(wd)
             return wd
         elif browser_name.lower() == "firefox":
