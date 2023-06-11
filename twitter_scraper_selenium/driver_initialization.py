@@ -13,6 +13,7 @@ from seleniumwire import webdriver
 # import webdriver for downloading respective driver for the browser
 from webdriver_manager.chrome import ChromeDriverManager
 from webdriver_manager.firefox import GeckoDriverManager
+from webdriver_manager.utils import ChromeType
 
 logger = logging.getLogger(__name__)
 format = logging.Formatter(
@@ -68,6 +69,7 @@ class Initializer:
 
                 return webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()),
                                         options=self.set_properties(browser_option), seleniumwire_options=options)
+            webdriver.Chrome(ChromeDriverManager(chrome_type=ChromeType.CHROMIUM).install()
             wd = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()), options=self.set_properties(browser_option))
             print(wd)
             return wd
