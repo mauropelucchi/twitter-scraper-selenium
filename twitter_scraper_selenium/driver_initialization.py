@@ -69,7 +69,7 @@ class Initializer:
 
                 return webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()),
                                         options=self.set_properties(browser_option), seleniumwire_options=options)
-            webdriver.Chrome(ChromeDriverManager(chrome_type=ChromeType.CHROMIUM).install()
+            webdriver.Chrome(ChromeDriverManager(chrome_type=ChromeType.CHROMIUM).install())
             wd = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()), options=self.set_properties(browser_option))
             print(wd)
             return wd
