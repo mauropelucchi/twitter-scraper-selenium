@@ -2,6 +2,7 @@
 
 
 import logging
+import sys
 from typing import Union
 from fake_headers import Headers
 # to add capabilities for chrome and firefox, import their Options with different aliases
