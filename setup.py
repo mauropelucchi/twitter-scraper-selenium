@@ -40,7 +40,7 @@ setuptools.setup(
     python_requires=">=3.6",
     install_requires=[
         'python-dateutil==2.8.2',
-        'selenium==4.7.0',
+        'selenium==4.9.1',
         'selenium-wire==5.1.0',
         'webdriver-manager==3.2.2',
         'fake-headers==1.0.2',
